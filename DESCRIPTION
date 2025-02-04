@@ -27,3 +27,5 @@ Imports:
 Remotes: 
     dempsey-CMAR/adcp,
     dempsey-CMAR/sensorstrings
+URL: https://github.com/dempsey-CMAR/tilt
+BugReports: https://github.com/dempsey-CMAR/tilt/issues
