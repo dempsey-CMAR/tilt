@@ -22,6 +22,7 @@ tilt_write_report_table <- function(metadata) {
       Latitude = deployment_latitude, Longitude = deployment_longitude,
       `Deployment Date` = deployment_date, `Retrieval Date` = retrieval_date,
       `Duration (d)` = depl_duration,
+      `Sample Interval (mins)` = sample_interval,
       `Depth Sounding (m)` = sounding_m
     ) %>%
     mutate(

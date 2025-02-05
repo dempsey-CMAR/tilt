@@ -27,7 +27,8 @@ utils::globalVariables(
     "timestamp_utc",
     "value",
     "Record",
-    "variable_label"
+    "variable_label",
+    "sample_interval"
 
   ))
 

@@ -61,7 +61,7 @@ tilt_plot_ts <- function(
 
   }
 
-  p <- ggplot(dat, aes(timestamp_utc, value, col = variable))
+  p <- ggplot(dat, aes(timestamp_utc, value, col = variable_label))
 
   if(geom == "line") {
     p <- p + geom_line(linewidth = size)
@@ -82,7 +82,7 @@ tilt_plot_ts <- function(
       strip.text = element_text(colour = "black", size = 10)
     ) +
     facet_wrap(
-      ~variable,
+      ~variable_label,
       ncol = n_col,
       scales = scales,
       strip.position = "left"
