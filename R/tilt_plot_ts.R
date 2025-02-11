@@ -61,7 +61,16 @@ tilt_plot_ts <- function(
 
   }
 
-  p <- ggplot(dat, aes(timestamp_utc, value, col = variable_label))
+  p <- ggplot(
+    dat,
+    aes(timestamp_utc, value,
+        col = variable_label,
+        group = variable_label,
+        text = paste(
+          "timestamp: ", timestamp_utc, "\n",
+          "value: ", value, "\n"
+        ))
+  )
 
   if(geom == "line") {
     p <- p + geom_line(linewidth = size)

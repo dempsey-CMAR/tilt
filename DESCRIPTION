@@ -17,9 +17,12 @@ Imports:
     flextable,
     ggplot2,
     grDevices,
+    lubridate,
     officer,
+    plotly,
     readxl,
-    sensorstrings (>= 1.0.2),
+    sensorstrings (>= 1.0.3),
+    shiny,
     stringr,
     tidyr,
     viridis

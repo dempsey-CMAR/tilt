@@ -28,7 +28,11 @@ utils::globalVariables(
     "value",
     "Record",
     "variable_label",
-    "sample_interval"
+    "sample_interval",
+
+    "county",
+    "deployment_range",
+    "timestamp_"
 
   ))
 
