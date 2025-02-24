@@ -32,7 +32,23 @@ utils::globalVariables(
 
     "county",
     "deployment_range",
-    "timestamp_"
+    "timestamp_",
+
+    "depl_date",
+    "station_deployment_id",
+    "deployment_id",
+
+    "qc_test",
+    "notes",
+    "grossrange_flag",
+    "sensor_min",
+    "sensor_max",
+    "user_min",
+    "user_max",
+    "value_sea_water_speed_cm_s",
+    "grossrange_flag_sea_water_to_direction_degree",
+
+    "tilt_thresholds"
 
   ))
 
