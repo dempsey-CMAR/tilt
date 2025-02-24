@@ -11,10 +11,6 @@ tilt_pivot_flags_longer(dat, qc_tests = NULL)
 
 \item{qc_tests}{Quality control tests included in \code{dat_wide}. If
 \code{dat_wide} only includes the max flag, use \code{qc_tests = "qc"}.}
-
-\item{vars}{Vector of character strings indicating which columns to pivot.
-Default is all variables. Only required if variables in \code{dat} are in a
-wide format.}
 }
 \value{
 Returns \code{dat_wide}, with variables and flags pivoted to a long

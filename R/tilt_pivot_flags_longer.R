@@ -2,10 +2,6 @@
 #'
 #' @param dat Data frame of flagged wave data in wide format.
 #'
-#' @param vars Vector of character strings indicating which columns to pivot.
-#'   Default is all variables. Only required if variables in \code{dat} are in a
-#'   wide format.
-#'
 #' @param qc_tests Quality control tests included in \code{dat_wide}. If
 #'   \code{dat_wide} only includes the max flag, use \code{qc_tests = "qc"}.
 #'
