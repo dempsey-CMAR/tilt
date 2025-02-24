@@ -1,9 +1,8 @@
 Package: tilt
 Type: Package
-Title: Format and Visualize Tilt Meter Current Data
-Version: 0.0.0.9000
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
+Title: Format and Visualize Tilt Meter Data
+Version: 0.0.1
+Authors@R: person("Danielle", "Dempsey", email = "ddempsey@perennia.ca", role = c("aut", "cre"))
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
 License: GPL (>= 3)
@@ -20,7 +19,9 @@ Imports:
     lubridate,
     officer,
     plotly,
+    qaqcmar (>= 1.0.8),
     readxl,
+    rlang,
     sensorstrings (>= 1.0.3),
     shiny,
     stringr,
@@ -28,6 +29,12 @@ Imports:
     viridis
 Remotes: 
     dempsey-CMAR/adcp,
-    dempsey-CMAR/sensorstrings
+    dempsey-CMAR/sensorstrings,
+    dempsey-CMAR/qaqcmar
 URL: https://github.com/dempsey-CMAR/tilt
 BugReports: https://github.com/dempsey-CMAR/tilt/issues
+Depends: 
+    R (>= 2.10)
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
