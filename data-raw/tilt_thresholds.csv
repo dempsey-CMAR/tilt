@@ -1,0 +1,42 @@
+﻿qc_test,variable,sensor_type,range,threshold,threshold_value,notes
+grossrange,temperature_degree_c,TCM-1,,sensor_min,-20,data sheet
+grossrange,sea_water_to_direction_degree,TCM-1,,sensor_min,0,data sheet
+grossrange,sea_water_speed_cm_s,TCM-1,,sensor_min,0,data sheet
+grossrange,velocity_n_cm_s,TCM-1,,sensor_min,,
+grossrange,velocity_e_cm_s   ,TCM-1,,sensor_min,,
+grossrange,temperature_degree_c,TCM-1,,sensor_max,50,data sheet
+grossrange,sea_water_to_direction_degree,TCM-1,,sensor_max,360,
+grossrange,sea_water_speed_cm_s,TCM-1,,sensor_max,120,from universal handbook
+grossrange,velocity_n_cm_s,TCM-1,,sensor_max,,
+grossrange,velocity_e_cm_s   ,TCM-1,,sensor_max,,
+grossrange,temperature_degree_c,TCM-1,,user_min,-5,less accurate outside this range
+grossrange,sea_water_to_direction_degree,TCM-1,,user_min,0,depends on sea_water_speed_cm_s
+grossrange,sea_water_speed_cm_s,TCM-1,,user_min,0,
+grossrange,velocity_n_cm_s,TCM-1,,user_min,,
+grossrange,velocity_e_cm_s   ,TCM-1,,user_min,,
+grossrange,temperature_degree_c,TCM-1,,user_max,30,less accurate outside this range
+grossrange,sea_water_to_direction_degree,TCM-1,,user_max,360,depends on sea_water_speed_cm_s
+grossrange,sea_water_speed_cm_s,TCM-1,low,user_max,40,data sheet
+grossrange,sea_water_speed_cm_s,TCM-1,high,user_max,80,data sheet
+grossrange,velocity_n_cm_s,TCM-1,,user_max,,
+grossrange,velocity_e_cm_s   ,TCM-1,,user_max,,
+grossrange,temperature_degree_c,TCM-4,,sensor_min,-20,data sheet
+grossrange,sea_water_to_direction_degree,TCM-4,,sensor_min,0,data sheet
+grossrange,sea_water_speed_cm_s,TCM-4,,sensor_min,0,data sheet
+grossrange,velocity_n_cm_s,TCM-4,,sensor_min,,
+grossrange,velocity_e_cm_s   ,TCM-4,,sensor_min,,
+grossrange,temperature_degree_c,TCM-4,,sensor_max,50,data sheet
+grossrange,sea_water_to_direction_degree,TCM-4,,sensor_max,360,
+grossrange,sea_water_speed_cm_s,TCM-4,,sensor_max,75,from universal handbook
+grossrange,velocity_n_cm_s,TCM-4,,sensor_max,,
+grossrange,velocity_e_cm_s   ,TCM-4,,sensor_max,,
+grossrange,temperature_degree_c,TCM-4,,user_min,-5,less accurate outside this range
+grossrange,sea_water_to_direction_degree,TCM-4,,user_min,0,depends on sea_water_speed_cm_s
+grossrange,sea_water_speed_cm_s,TCM-4,,user_min,0,
+grossrange,velocity_n_cm_s,TCM-4,,user_min,,
+grossrange,velocity_e_cm_s   ,TCM-4,,user_min,,
+grossrange,temperature_degree_c,TCM-4,,user_max,30,less accurate outside this range
+grossrange,sea_water_to_direction_degree,TCM-4,,user_max,360,depends on sea_water_speed_cm_s
+grossrange,sea_water_speed_cm_s,TCM-4,,user_max,50,data sheet
+grossrange,velocity_n_cm_s,TCM-4,,user_max,,
+grossrange,velocity_e_cm_s   ,TCM-4,,user_max,,
