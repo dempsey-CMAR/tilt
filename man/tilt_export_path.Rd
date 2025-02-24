@@ -4,7 +4,7 @@
 \alias{tilt_export_path}
 \title{Generate file path and name to export tilt meter data}
 \usage{
-tilt_export_path(depl_info, path = NULL, sub_folder = NULL, ext = "csv")
+tilt_export_path(depl_info, path = NULL, sub_folder = NULL, ext = "rds")
 }
 \arguments{
 \item{depl_info}{Row of the tilt meter metadata tracking sheet that
