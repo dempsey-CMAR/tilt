@@ -8,6 +8,7 @@ tilt_plot_flags(
   dat,
   qc_tests = "grossrange",
   vars = "all",
+  point_size = 0.25,
   labels = TRUE,
   n_col = NULL,
   flag_title = TRUE,
@@ -23,6 +24,9 @@ include at least one column name with the string "_flag_variable".}
 
 \item{vars}{Character vector of variables to plot. Default is \code{vars =
 "all"}, which will make a plot for each recognized variable in \code{dat}.}
+
+\item{point_size}{Numeric argument indicating size of the points. Passed to
+\code{geom_point()}.}
 
 \item{labels}{Logical argument indicating whether to convert numeric flag
 values to text labels for the legend.}

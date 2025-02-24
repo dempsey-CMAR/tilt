@@ -4,10 +4,13 @@
 #'   include at least one column name with the string "_flag_variable".
 #'
 #' @param vars Character vector of variables to plot. Default is \code{vars =
-#'  "all"}, which will make a plot for each recognized variable in \code{dat}.
+#'   "all"}, which will make a plot for each recognized variable in \code{dat}.
 #'
 #' @param qc_tests Character string of QC tests to plot. Default is
 #'   \code{qc_tests = "grossrange"}.
+#'
+#' @param point_size Numeric argument indicating size of the points. Passed to
+#'   \code{geom_point()}.
 #'
 #' @param labels Logical argument indicating whether to convert numeric flag
 #'   values to text labels for the legend.
@@ -35,6 +38,7 @@ tilt_plot_flags <- function(
     dat,
     qc_tests = "grossrange",
     vars = "all",
+    point_size = 0.25,
     labels = TRUE,
     n_col = NULL,
     flag_title = TRUE,
@@ -59,6 +63,7 @@ tilt_plot_flags <- function(
 
     p_out[[qc_test_j]] <- tilt_ggplot_flags(
       dat,
+      point_size = point_size,
       qc_test = qc_test_j,
       n_col = n_col,
       plotly_friendly = plotly_friendly,
@@ -91,6 +96,7 @@ tilt_plot_flags <- function(
 tilt_ggplot_flags <- function(
     dat,
     qc_test,
+    point_size,
     n_col = NULL,
     flag_title = TRUE,
     plotly_friendly = FALSE
@@ -103,7 +109,7 @@ tilt_ggplot_flags <- function(
   p <- dat %>%
     tilt_create_variable_labels() %>%
     ggplot(aes(timestamp_utc, value, col = !!sym(flag_column))) +
-    geom_point(show.legend = TRUE) +
+    geom_point(show.legend = TRUE, size = point_size) +
     scale_x_datetime("Date", date_labels = "%Y-%m-%d") +
     scale_colour_manual("Flag Value", values = flag_colours, drop = FALSE) +
     theme_light() +

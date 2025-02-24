@@ -7,6 +7,7 @@
 tilt_ggplot_flags(
   dat,
   qc_test,
+  point_size,
   n_col = NULL,
   flag_title = TRUE,
   plotly_friendly = FALSE
@@ -17,6 +18,9 @@ tilt_ggplot_flags(
 include a column named with the string "_flag_value".}
 
 \item{qc_test}{qc test to plot.}
+
+\item{point_size}{Numeric argument indicating size of the points. Passed to
+\code{geom_point()}.}
 
 \item{n_col}{Number of columns for faceted plots.}
 
