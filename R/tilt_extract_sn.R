@@ -26,7 +26,7 @@ tilt_extract_sn <- function(files, return_numeric = TRUE) {
     )
   }
 
-  if(isTRUE(numeric)) sn <- as.numeric(sn)
+  if(isTRUE(return_numeric)) sn <- as.numeric(sn)
 
   sn
 }
