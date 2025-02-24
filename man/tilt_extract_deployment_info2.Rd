@@ -2,12 +2,12 @@
 % Please edit documentation in R/helpers.R
 \name{tilt_extract_deployment_info2}
 \alias{tilt_extract_deployment_info2}
-\title{Extract deployment date and station name from compiled csv file}
+\title{Extract deployment date and station name from compiled rds file}
 \usage{
 tilt_extract_deployment_info2(file_path)
 }
 \arguments{
-\item{file_path}{Path to the file, include file name and extension (.csv).
+\item{file_path}{Path to the file, include file name and extension (.rds).
 File name must include the deployment date, the station name, and the
 deployment id separated by "_", e.g., "2024-05-16_1442_TILT001".}
 }
@@ -16,5 +16,5 @@ Returns a tibble with three columns: \code{depl_date},
   \code{station}, and \code{deployment_id}.
 }
 \description{
-Extract deployment date and station name from compiled csv file
+Extract deployment date and station name from compiled rds file
 }
