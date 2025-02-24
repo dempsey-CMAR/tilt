@@ -74,6 +74,11 @@ tilt_format_report_table <- function(report_table, transpose = TRUE) {
       flextable::bg(part = "all", i = c(2, 4), bg = "grey90")
   }
 
+  if(report_table$body$content$content$nrow == 9) {
+    report_table <- report_table %>%
+      flextable::bg(part = "all", i = c(2, 4, 6, 8), bg = "grey90")
+  }
+
   if(report_table$body$content$content$nrow >= 10) {
     report_table <- report_table %>%
       flextable::bg(part = "all", i = c(2, 4, 6, 8, 10), bg = "grey90")
