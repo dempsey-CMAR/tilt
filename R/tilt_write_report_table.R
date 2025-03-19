@@ -22,8 +22,11 @@ tilt_write_report_table <- function(metadata) {
       Latitude = deployment_latitude, Longitude = deployment_longitude,
       `Deployment Date` = deployment_date, `Retrieval Date` = retrieval_date,
       `Duration (d)` = depl_duration,
-      `Sample Interval (mins)` = sample_interval,
-      `Depth Sounding (m)` = sounding_m
+      `Depth Sounding (m)` = sounding_m,
+      #`Sensor Height Above Sea Floor (m)` =
+      `Ensemble Interval (s)` = ensemble_interval_s,
+      `Averaging Interval (s)` = averaging_interval_s,
+      `Observations per Interval` = pings_per_ensemble
     ) %>%
     mutate(
       `Depth Sounding (m)` = as.character(`Depth Sounding (m)`),

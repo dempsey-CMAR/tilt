@@ -61,6 +61,9 @@ tilt_format_report_table <- function(report_table, transpose = TRUE) {
     flextable::fit_to_width(7.5)
 
 
+  if(report_table$body$content$content$nrow == 1) {
+    report_table <- report_table
+  }
   if(report_table$body$content$content$nrow == 2) {
     report_table <- report_table %>%
       flextable::bg(part = "all", i = 2, bg = "grey90")

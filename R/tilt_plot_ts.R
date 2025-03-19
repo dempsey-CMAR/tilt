@@ -49,16 +49,13 @@ tilt_plot_ts <- function(
     dat <- tilt_pivot_longer(dat)
   }
 
-
   dat <- dat %>%
     tilt_create_variable_labels()
 
   vars <- distinct(dat, variable)$variable
 
   if(is.null(pal)) {
-
     pal <- viridis(length(vars), option = "F", begin = 0.2, end = 0.8)
-
   }
 
   p <- ggplot(

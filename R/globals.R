@@ -48,8 +48,11 @@ utils::globalVariables(
     "value_sea_water_speed_cm_s",
     "grossrange_flag_sea_water_to_direction_degree",
 
-    "tilt_thresholds"
+    "ensemble_interval_s",
+    "averaging_interval_s",
+    "pings_per_ensemble",
 
+    "tilt_thresholds"
   ))
 
 

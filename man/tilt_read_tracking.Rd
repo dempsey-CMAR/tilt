@@ -10,7 +10,7 @@ tilt_read_tracking(path = NULL, file = NULL, sheet = NULL)
 \item{path}{File path to the folder with the metadata file. Default is the
 metadata_tracking folder on the CMAR R drive.}
 
-\item{file}{Name of the metadata file, includeing file extension. Must be a
+\item{file}{Name of the metadata file, including file extension. Must be a
 ".xlsx" file. Default is "tilt_meter_deployment_tracking.xlsx".}
 
 \item{sheet}{Name of the sheet to read in.}
@@ -19,5 +19,5 @@ metadata_tracking folder on the CMAR R drive.}
 Returns a data frame of the metadata tracking sheet.
 }
 \description{
-Read tilt meter deployment metadata
+Could change this to read in the google sheet
 }

@@ -77,7 +77,7 @@ tilt_create_variable_labels <- function(dat, convert_to_ordered_factor = TRUE) {
 
 tilt_import_path <- function(station, depl_date, path = NULL) {
   if (is.null(path)) {
-    path <- "R:/data_branches/current/tilt_meter"
+    path <- "R:/data_branches/current/tilt_meter/station_folders"
   }
 
   station <- tolower(station)
