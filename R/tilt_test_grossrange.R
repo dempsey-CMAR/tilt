@@ -8,9 +8,6 @@
 #'   \code{sensor_max}: maximum accepted value ; \code{user_min}: minimum
 #'   reasonable value; \code{user_max}: maximum reasonable value.
 #'
-#' @param range For TCM-1 sensors. Estimate speed range. Options are "low" or
-#'   "high".
-#'
 #' @param sensor_type Character string indicating which sensor collected the
 #'   data. Options are "TCM-1" or "TCM-4".
 #'
@@ -26,7 +23,6 @@
 
 tilt_test_grossrange <- function(
     dat,
-    range = "low",
     sensor_type = c("TCM-1", "TCM-4"),
     tilt_grossrange_table = NULL
 ) {
@@ -37,12 +33,8 @@ tilt_test_grossrange <- function(
   if (is.null(tilt_grossrange_table)) {
 
     tilt_grossrange_table <- tilt_thresholds %>%
-      filter(
-        qc_test == "grossrange",
-        range == !!range | is.na(range),
-        sensor_type == !!sensor_type
-      ) %>%
-      select(-c(qc_test, range, sensor_type, notes)) %>%
+      filter(qc_test == "grossrange", sensor_type == !!sensor_type) %>%
+      select(-c(qc_test, sensor_type, notes)) %>%
       pivot_wider(values_from = "threshold_value", names_from = "threshold")
   }
 

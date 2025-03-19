@@ -6,16 +6,12 @@
 \usage{
 tilt_test_grossrange(
   dat,
-  range = "low",
   sensor_type = c("TCM-1", "TCM-4"),
   tilt_grossrange_table = NULL
 )
 }
 \arguments{
 \item{dat}{Data frame of tilt meter variables in wide format.}
-
-\item{range}{For TCM-1 sensors. Estimate speed range. Options are "low" or
-"high".}
 
 \item{sensor_type}{Character string indicating which sensor collected the
 data. Options are "TCM-1" or "TCM-4".}
