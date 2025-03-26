@@ -42,7 +42,7 @@ tilt_open_trimdates_app <- function(
     custom_start = NULL,
     custom_end = NULL,
     point_size = 2) {
-  # Define UI for application that draws a histogram
+
   ui <- fluidPage(
     plotlyOutput("vars_plot", height = "600px"),
     tableOutput("info")
@@ -68,8 +68,8 @@ tilt_open_trimdates_app <- function(
           period = period,
           custom_start = custom_start,
           custom_end = custom_end
-        ) %>%
-        rename(timestamp_utc = timestamp_)
+        ) #%>%
+       # rename(timestamp_utc = timestamp_)
 
       p <- tilt_plot_ts(dat, geom = "point", scales = "free", n_col = 1)
 

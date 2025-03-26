@@ -1,10 +1,9 @@
 Package: tilt
 Type: Package
 Title: Format and Visualize Tilt Meter Data
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: person("Danielle", "Dempsey", email = "ddempsey@perennia.ca", role = c("aut", "cre"))
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Description: Facilitates wrangling and analysis of Current data collected with tilt meters as part of the Centre for Marine Applied Research's Coastal Monitoring Program. 
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
