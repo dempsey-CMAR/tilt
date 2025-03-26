@@ -48,6 +48,7 @@ utils::globalVariables(
     "value_sea_water_speed_cm_s",
     "grossrange_flag_sea_water_to_direction_degree",
 
+    "sensor_height_above_sea_floor_m",
     "ensemble_interval_s",
     "averaging_interval_s",
     "pings_per_ensemble",

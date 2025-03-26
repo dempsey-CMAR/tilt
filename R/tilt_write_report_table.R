@@ -23,7 +23,7 @@ tilt_write_report_table <- function(metadata) {
       `Deployment Date` = deployment_date, `Retrieval Date` = retrieval_date,
       `Duration (d)` = depl_duration,
       `Depth Sounding (m)` = sounding_m,
-      #`Sensor Height Above Sea Floor (m)` =
+      `Sensor Height Above Sea Floor (m)` = sensor_height_above_sea_floor_m,
       `Ensemble Interval (s)` = ensemble_interval_s,
       `Averaging Interval (s)` = averaging_interval_s,
       `Observations per Interval` = pings_per_ensemble
