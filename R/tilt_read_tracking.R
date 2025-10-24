@@ -41,15 +41,15 @@ tilt_read_tracking <- function(path = NULL, file = NULL, sheet = NULL) {
     path = paste0(path, "/", file),
     sheet = sheet
   )  %>%
-    mutate(
-      across(
-        any_of(coords_ddm),
-        ~ss_coords_from_ddm_to_dd(.x),
-        .names = "{str_remove(.col, '_w_ddm|_n_ddm')}"
-      ),
-      deployment_longitude = -deployment_longitude,
-      retrieval_longitude = -retrieval_longitude
-    ) %>%
+    # mutate(
+    #   across(
+    #     any_of(coords_ddm),
+    #     ~ss_coords_from_ddm_to_dd(.x),
+    #     .names = "{str_remove(.col, '_w_ddm|_n_ddm')}"
+    #   ),
+    #   deployment_longitude = -deployment_longitude,
+    #   retrieval_longitude = -retrieval_longitude
+    # ) %>%
     separate(
       deployment_time_utc, into = c(NA, "deployment_time_utc"), sep = " "
     ) %>%
