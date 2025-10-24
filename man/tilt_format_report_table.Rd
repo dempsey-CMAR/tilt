@@ -2,7 +2,7 @@
 % Please edit documentation in R/tilt_format_report_table.R
 \name{tilt_format_report_table}
 \alias{tilt_format_report_table}
-\title{Formats tables for summary report}
+\title{Formats tables for typst summary report}
 \usage{
 tilt_format_report_table(report_table, transpose = TRUE)
 }
@@ -15,11 +15,10 @@ for the deployment table. Set to \code{FALSE} for the document history
 table.}
 }
 \value{
-Returns a flextable object that will render nicely in the Word
-  report. A table with two columns: the first column (bold) is the column
-  names of \code{report_table}; the second column is the corresponding
-  entries in \code{report_table}.
+Returns a data frame that will render nicely in the typst report.
+  Every cell is converted to text inside square brackets and separated with
+  ",", as expected by the typst table function.
 }
 \description{
-Formats tables for summary report
+Formats tables for typst summary report
 }

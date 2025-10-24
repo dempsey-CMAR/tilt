@@ -53,7 +53,9 @@ utils::globalVariables(
     "averaging_interval_s",
     "pings_per_ensemble",
 
-    "tilt_thresholds"
+    "tilt_thresholds",
+
+    "col1"
   ))
 
 

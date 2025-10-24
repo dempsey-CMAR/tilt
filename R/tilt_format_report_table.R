@@ -1,4 +1,44 @@
-#' Formats tables for summary report
+#' Formats tables for typst summary report
+#'
+#' @param report_table Table to include in the summary report.
+#'
+#' @param transpose Logical argument indicating whether to transpose
+#'   \code{report_table} before applying the format. Use the default \code{TRUE}
+#'   for the deployment table. Set to \code{FALSE} for the document history
+#'   table.
+#'
+#' @return Returns a data frame that will render nicely in the typst report.
+#'   Every cell is converted to text inside square brackets and separated with
+#'   ",", as expected by the typst table function.
+#'
+#' @importFrom dplyr across everything mutate select
+#'
+#' @export
+
+
+tilt_format_report_table <- function(report_table, transpose = TRUE) {
+  if (isTRUE(transpose)) {
+    # transpose table and make the column names the first column
+    report_table <- report_table %>%
+      t() %>%
+      data.frame()
+
+    report_table$col1 <- rownames(report_table)
+    report_table <- report_table %>%
+      dplyr::select(col1, col2 = 1)
+  }
+
+  report_table %>%
+    mutate(
+      across(.cols = everything(), .fns = ~as.character(.x)),
+      across(.cols = everything(), .fns = ~paste0("[", .x, "],"))
+    ) %>%
+    t()
+}
+
+
+
+#' Formats tables for word summary report
 #'
 #' @param report_table Table to include in the summary report.
 #'
@@ -20,7 +60,7 @@
 #' @export
 
 
-tilt_format_report_table <- function(report_table, transpose = TRUE) {
+tilt_format_report_table_word <- function(report_table, transpose = TRUE) {
   if (isTRUE(transpose)) {
     # transpose table and make the column names the first column
     report_table <- report_table %>%
