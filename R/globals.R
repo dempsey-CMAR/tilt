@@ -55,7 +55,10 @@ utils::globalVariables(
 
     "tilt_thresholds",
 
-    "col1"
+    "col1",
+
+    "qc_col",
+    "col_name"
   ))
 
 

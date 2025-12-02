@@ -35,5 +35,19 @@ dat2 <- dat_long %>%
   select(
     deployment_id, county, waterbody, station,
     timestamp_utc, sea_water_speed_cm_s, sea_water_to_direction_degree,
-    temperature_degree_c, velocity_e_cm_s, velocity_n_cm_s
+    temperature_degree_c, velocity_e_cm_s, velocity_n_cm_s,
+    bin_height_above_sea_floor_m
   )
+
+
+# test --------------------------------------------------------------------
+
+dat_qc <- dat %>%
+  select(-contains("grossrange")) %>%
+  tilt_test_grossrange()
+
+dat_qc_max <- dat_qc %>%
+  tilt_assign_max_flag()
+
+tilt_plot_flags(dat_qc_max, qc_tests = "qc")
+

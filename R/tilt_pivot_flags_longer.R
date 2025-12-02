@@ -17,11 +17,11 @@ tilt_pivot_flags_longer <- function(dat, qc_tests = NULL) {
 
   if (is.null(qc_tests)) {
     qc_tests <- c(
-      "grossrange"
+      "grossrange",
      # "crossref",
       # "rolling_sd",
       # "spike",
-      # "qc"
+       "qc"
     )
   }
 
